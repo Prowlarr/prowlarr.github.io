@@ -1,0 +1,30 @@
+<install-steps>
+  <install-step title="Introduction">
+    <p>Prowlarr is supported natively on Windows. Prowlarr can be installed on Windows as Windows Service or system tray application.</p>
+    <p>
+      A Windows Service runs even when the user is not logged in, but special care must be taken since Windows Services cannot access network drives (X:\ mapped drives) without special configuration steps.<br/>
+      Additionally the Windows Service runs under the 'Local Service' account, by default this account does not have permissions to access your user's home directory unless permissions have been assigned manually. This is particularly relevant when using download clients that are configured to download to your home directory.<br/>
+      'Local Service' also generally has very limited permissions. It's therefore advisable to install Prowlarr as a system tray application if the user can remain logged in. The option to do so is provided during the installer.
+    </p>
+    <alert level="warning">Windows versions are limited for support to those currently supported by Microsoft, others may work but this is an unsupported configuration.</alert>
+  </install-step>
+  <install-step num="1" title="Install Prowlarr">
+    <p>Download the Windows Installer with the following link and execute it.</p>
+    <a class="btn btn-prowlarr" href="https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64&installer=true">Download Windows x64 Installer</a>
+    <a class="btn btn-prowlarr" href="https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x86&installer=true">Download Windows x86 Installer</a>
+  </install-step>
+  <install-step num="2" title="View Prowlarr">
+    <p>
+      Browse to
+      <code>http://localhost:9696</code>
+      to start using Prowlarr.
+    </p>
+  </install-step>
+</install-steps>
+<install-alternatives id="downloads-v1-windows-alternatives">
+  <h5>Manual Install</h5>
+  <p>
+    It is possible to install Prowlarr manually using the x64
+    <a href="https://prowlarr.servarr.com/v1/update/develop/updatefile?os=windows&runtime=netcore&arch=x64">.zip download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+  </p>
+</install-alternatives>

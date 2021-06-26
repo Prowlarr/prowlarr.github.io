@@ -1,0 +1,48 @@
+<dl class="install-steps">
+  <install-step title="Introduction">
+    <p>
+      The Prowlarr team does not offer an official Docker image. However, a number of third parties have created and maintain their own.<br/>
+      These instructions provide generic guidance that should apply to any Prowlarr Docker image.
+    </p>
+  </install-step>
+  <install-step num="1" title="Avoid common pitfalls">
+    <p>
+      <i>
+  See
+        <a href="https://wiki.servarr.com/docker-guide">The Best Docker Setup and Docker Guide</a>
+        wiki article.
+      </i>
+    </p>
+  </install-step>
+  <install-step num="2" title="Install Prowlarr">
+    <p>
+      To install and use these Docker images, you'll need to keep the above in mind while following their documentation. There are many ways to manage Docker images and containers too, so installation
+      and maintenance of them will depend on the route you choose.
+      <ul>
+        <li>
+          <h5>
+            <a href="https://ghcr.io/hotio/prowlarr:testing">ghcr.io/hotio/prowlarr:testing</a>
+          </h5>
+          <p>
+            <a href="https://hotio.dev">hotio</a>
+            doesn't specify any default volumes, besides
+            <code>/config</code>. Images are automatically updated 2x in 1 hour if upstream changes are found. Hotio also builds our Pull Requests which may be useful for testing.
+            Read the
+            <a href="https://hotio.dev/containers/prowlarr">instructions</a>
+            on how to install the image.
+          </p>
+        </li>
+        <li>
+          <h5>
+            <a href="https://ghcr.io/linuxserver/prowlarr:develop">ghcr.io/linuxserver/prowlarr:develop</a>
+          </h5>
+          <p>
+            <a href="https://www.linuxserver.io">linuxserver.io</a>
+            is one of the most prolific and popular Docker image maintainers. They also maintain images for most of the popular download clients as well.
+            LinuxServer.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </install-step>
+</dl>

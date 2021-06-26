@@ -1,0 +1,36 @@
+<install-steps>
+  <install-step title="Introduction">
+    <p>The easiest way to install Prowlarr on macOS is to use the App archive with the steps described below.</p>
+    <!-- TODO: Check mac migration support -->
+  </install-step>
+  <install-step num="1" title="Download App package">
+    <a class="btn btn-prowlarr" href="https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64&installer=true">Download macOS App</a>
+  </install-step>
+  <install-step num="2" title="Install App">
+    <p>Open the archive and drag the Prowlarr icon to your Application folder.</p>
+    <alert level="warning">Prowlarr v1 is not compatible with OSX versions < 10.13 (High Sierra) due to netcore incompatibilities.</alert>
+  </install-step>
+  <install-step num="3" title="Start Prowlarr">
+    <p>Open Prowlarr.app in your Application folder.</p>
+  </install-step>
+  <install-step num="4" title="View Prowlarr">
+    <p>
+      Browse to
+      <code>http://localhost:9696</code>
+      to start using Prowlarr.
+    </p>
+  </install-step>
+</install-steps>
+<install-alternatives id="downloads-v1-macos-alternatives">
+  <h5>Manual Install</h5>
+  <p>
+    It is possible to install Prowlarr manually using the
+    <a href="https://prowlarr.servarr.com/v1/update/develop/updatefile?os=osx&runtime=netcore&arch=x64">.tar.gz download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+  </p>
+  <h5>Docker container</h5>
+  <p>
+    You can follow the
+    <a href="#downloads-v1-docker">Docker guide</a>
+    to install Prowlarr as a Docker container instead.
+  </p>
+</install-alternatives>

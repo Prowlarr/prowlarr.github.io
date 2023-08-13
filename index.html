@@ -438,33 +438,6 @@ sudo systemctl enable --now prowlarr</code></pre>
                                 Avoid common pitfalls
                             </dt>
                             <dd>
-                                <h5>Volumes and Paths</h5>
-                                <p>
-                                    There are two common problems with Docker volumes: Paths that differ between the Prowlarr and download client container and paths that prevent fast moves and hard links.<br>
-                                    The first is a problem because the download client will report a download's path as
-                                    <code>/torrents/My.Movie.2018/</code>, but in the Prowlarr container that might be at
-                                    <code>/downloads/My.Movie.2018/</code>. The second is a performance issue and causes problems for seeding torrents. Both problems can be solved with well planned, consistent paths.
-                                </p>
-                                <p>
-                                    Most Docker images suggest paths like
-                                    <code>/movies</code>
-                                    and
-                                    <code>/downloads</code>. This causes slow moves and doesn't allow hard links because they
-                                    are considered two different file systems
-                                    <i>inside</i>
-                                    the container. Some also recommend paths for the download client container that are different from the Prowlarr container, like
-                                    <code>/torrents</code>.<br>
-                                    The best solution is to use a single, common volume
-                                    <i>inside</i>
-                                    the containers, such as
-                                    <code>/data</code>.
-                                    Your Movies would be in
-                                    <code>/data/Movies</code>, torrents in
-                                    <code>/data/downloads/torrents</code>
-                                    and/or usenet downloads in
-                                    <code>/data/downloads/usenet</code>.
-                                </p>
-                                <p>If this advice is not followed, you may have to configure a Remote Path Mapping in the Prowlarr web UI (Settings &rsaquo; Download Clients).</p>
                                 <h5>Ownership and Permissions</h5>
                                 <p>
                                     Permissions and ownership of files is one of the most common problems for Prowlarr users, both inside and outside Docker. Most images have environment variables that can be used to override
@@ -537,8 +510,7 @@ sudo systemctl enable --now prowlarr</code></pre>
                     </div>
                     <div class="tab-pane fade" id=downloads-v3-other role=tabpanel>
                         <div class="alert alert-info">
-                            Please contact us if you wish to port Prowlarr v3 for any other platform that the ones already listed.<br>
-                            Prowlarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+                            Please contact us if you wish to port Prowlarr for any other platform that the ones already listed.
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,34 @@
+<div>
+  <ul class="nav nav-pills">
+    <tabview-item active pill href="#downloads-v3-nas-synology">Synology</tabview-item>
+    <tabview-item pill href="#downloads-v3-nas-qnap">QNAP</tabview-item>
+    <tabview-item pill href="#downloads-v3-nas-other" icon="fas-ellipsis-v">&nbsp;&nbsp;Others</tabview-item>
+  </ul>
+  <div class="tab-content" id="download-v3-nas-tabcontent">
+    <tabview-pane active id="downloads-v3-nas-synology">
+      <alert level="info">
+        A NAS package and installation instructions are provided by SynoCommunity at:
+        <a href="https://synocommunity.com/package/prowlarr">https://synocommunity.com/package/prowlarr</a>.
+        Please note that the SynoCommunity typically has signifcant lag in providing updated packages, thus you may want to check out Docker.
+      </alert>
+    </tabview-pane>
+    <tabview-pane id="downloads-v3-nas-qnap">
+      <alert level="info">
+        A NAS packages that requires a paid dependency is created by the QNAP community<br/>
+        <a href="https://www.qnapclub.eu/en/qpkg/1007">https://www.qnapclub.eu/en/qpkg/1007</a>.
+        Please note that the QNAP Community typically has signifcant lag in providing updated packages, thus you may want to check out Docker.
+        Additionally, the QNAP Community requires a paid dependency which the Prowlarr Team does not condone.
+      </alert>
+    </tabview-pane>
+    <tabview-pane id="downloads-v3-nas-other">
+      <install-description>
+        <alert level="info">
+          Please contact us if you wish to port Prowlarr v3 for any other nas that the ones already listed.<br/>
+          Prowlarr v0.2 was supported by various third-parties on other platforms and we prefer to coordinate the port of v3.
+        </alert>
+        <p>A generic download is available for linux, but dependencies, installation, and permissions will need to be done manually.</p>
+        <a class="btn btn-prowlarr" href="https://prowlarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64">Download Linux .tar.gz</a>
+      </install-description>
+    </tabview-pane>
+  </div>
+</div>

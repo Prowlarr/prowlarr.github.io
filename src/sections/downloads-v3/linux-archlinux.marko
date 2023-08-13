@@ -1,0 +1,49 @@
+<install-steps>
+  <install-step title="Introduction">
+    <p>
+      The Arch Linux User Repository offers a
+      <a href="https://aur.archlinux.org/packages/prowlarr/">prowlarr</a>
+      package that can be installed manually
+      or using your favorite
+      <a href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helper</a>.
+    </p>
+  </install-step>
+  <install-step num="1" title="Install Prowlarr">
+    <p>
+      An aur helper can install prowlarr and its dependencies easily, or follow the
+      <a href="https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages">AUR Installing Packages</a>
+      wiki for manual installation.
+    </p>
+    <p>
+      For example, to use
+      <a href="https://github.com/Jguer/yay">yay</a>
+      to install the prowlarr package:
+      <pre><code class="bash">yay -S prowlarr</code></pre>
+    </p>
+  </install-step>
+  <install-step num="2" title="Start Prowlarr">
+    <pre><code class="bash">sudo systemctl daemon-reload
+sudo systemctl enable --now prowlarr</code></pre>
+  </install-step>
+  <install-step num="3" title="View Prowlarr">
+    <p>
+      Browse to
+      <code>http://localhost:9696</code>
+      to start using Prowlarr.
+    </p>
+    <i>(Replace 'localhost' with your server IP if you're connecting remotely)</i>
+  </install-step>
+</install-steps>
+<install-alternatives id="downloads-v3-linux-archlinux-alternatives">
+  <h5>Manual Install</h5>
+  <p>
+    It is possible to install Prowlarr manually from upstream using the
+    <a href="https://prowlarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64">.tar.gz download</a>. However in that case you must manually deal with dependencies, installation and permissions.
+  </p>
+  <h5>Docker container</h5>
+  <p>
+    You can follow the
+    <a href="#downloads-v3-docker">Docker guide</a>
+    to install Prowlarr as a Docker container instead.
+  </p>
+</install-alternatives>
